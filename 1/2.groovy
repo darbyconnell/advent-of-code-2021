@@ -2,8 +2,7 @@ def readInput() {
   def input = []
 
   new File('input').eachLine { line ->
-    line = line as int
-    input << line
+    input << (line as int)
   }
 
   return input
