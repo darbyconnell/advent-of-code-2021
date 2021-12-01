@@ -13,10 +13,7 @@ def increaseCount() {
   def items = readInput()
 
   for (int i = 0; i < items.size() - 3; i++) {
-    int currentSet = items[i] + items[i+1] + items[i+2]
-    int nextSet = items[i+1] + items[i+2] + items[i+3]
-
-    if (nextSet > currentSet) {
+    if (items[i+1..i+3].sum() > items[i..i+2].sum()) {
       count++
     }
   }
